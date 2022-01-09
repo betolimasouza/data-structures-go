@@ -26,7 +26,7 @@ func main() {
 
 }
 
-func findSmallestInt(sortArray []int) int {
+func findSmallestIndex(sortArray []int) int {
 
 	var smallest = sortArray[0]
 	var smallest_index = 0
@@ -52,9 +52,9 @@ func SelectionSort(sortArray []int) []int {
 	var sortedArray []int
 	var length = len(sortArray)
 	for i := 0; i < length; i++ {
-		var smallest = findSmallestInt(sortArray)
-		sortedArray = append(sortedArray, sortArray[smallest])
-		sortArray = removeAtIndex(sortArray, smallest)
+		var smallest_index = findSmallestIndex(sortArray)
+		sortedArray = append(sortedArray, sortArray[smallest_index])
+		sortArray = removeAtIndex(sortArray, smallest_index)
 	}
 
 	return sortedArray
