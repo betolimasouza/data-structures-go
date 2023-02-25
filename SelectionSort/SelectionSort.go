@@ -9,7 +9,6 @@ func main() {
 	var arrayInt [arraySize]int
 
 	for element := 0; element < arraySize; element++ {
-
 		arrayInt[element] = rand.Intn(arraySize)
 	}
 	println("Random Array")
